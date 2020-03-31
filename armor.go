@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"io/ioutil"
 
-	. "github.com/tendermint/go-common"
+	. "github.com/intfoundation/go-common"
 	"golang.org/x/crypto/openpgp/armor"
 )
 

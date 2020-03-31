@@ -1,7 +1,7 @@
 
 
 # crypto
-`import "github.com/tendermint/go-crypto"`
+`import "github.com/intfoundation/go-crypto"`
 
 * [Overview](#pkg-overview)
 * [Index](#pkg-index)
@@ -99,7 +99,7 @@
 
 
 #### <a name="pkg-files">Package files</a>
-[armor.go](/src/github.com/tendermint/go-crypto/armor.go) [hash.go](/src/github.com/tendermint/go-crypto/hash.go) [priv_key.go](/src/github.com/tendermint/go-crypto/priv_key.go) [pub_key.go](/src/github.com/tendermint/go-crypto/pub_key.go) [random.go](/src/github.com/tendermint/go-crypto/random.go) [signature.go](/src/github.com/tendermint/go-crypto/signature.go) [symmetric.go](/src/github.com/tendermint/go-crypto/symmetric.go) 
+[armor.go](/src/github.com/intfoundation/go-crypto/armor.go) [hash.go](/src/github.com/intfoundation/go-crypto/hash.go) [priv_key.go](/src/github.com/intfoundation/go-crypto/priv_key.go) [pub_key.go](/src/github.com/intfoundation/go-crypto/pub_key.go) [random.go](/src/github.com/intfoundation/go-crypto/random.go) [signature.go](/src/github.com/intfoundation/go-crypto/signature.go) [symmetric.go](/src/github.com/intfoundation/go-crypto/symmetric.go) 
 
 
 ## <a name="pkg-constants">Constants</a>

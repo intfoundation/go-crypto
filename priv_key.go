@@ -3,14 +3,14 @@ package crypto
 import (
 	"bytes"
 
-	"github.com/SickleZhang/bls"
+	"github.com/intfoundation/bls"
 	secp256k1 "github.com/btcsuite/btcd/btcec"
 	ethcrypto "github.com/intfoundation/intchain/crypto"
 	"github.com/tendermint/ed25519"
 	"github.com/tendermint/ed25519/extra25519"
-	. "github.com/tendermint/go-common"
-	"github.com/tendermint/go-data"
-	"github.com/tendermint/go-wire"
+	. "github.com/intfoundation/go-common"
+	"github.com/intfoundation/go-data"
+	"github.com/intfoundation/go-wire"
 )
 
 // PrivKey is part of PrivAccount and state.PrivValidator.

@@ -4,12 +4,12 @@ import (
 	"bytes"
 	"fmt"
 
-	. "github.com/tendermint/go-common"
-	"github.com/tendermint/go-data"
-	"github.com/tendermint/go-wire"
+	. "github.com/intfoundation/go-common"
+	"github.com/intfoundation/go-data"
+	"github.com/intfoundation/go-wire"
 	"encoding/hex"
 	"encoding/json"
-	"github.com/SickleZhang/bls"
+	"github.com/intfoundation/bls"
 )
 
 // Signature is a part of Txs and consensus Votes.

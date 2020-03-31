@@ -20,7 +20,7 @@ import (
 	"github.com/mndrix/btcutil"
 	"github.com/tyler-smith/go-bip32"
 
-	"github.com/tendermint/go-crypto"
+	"github.com/intfoundation/go-crypto"
 )
 
 type addrData struct {
