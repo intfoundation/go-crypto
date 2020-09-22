@@ -4,10 +4,10 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/intfoundation/ed25519"
+	data "github.com/intfoundation/go-data"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"github.com/tendermint/ed25519"
-	data "github.com/intfoundation/go-data"
 )
 
 func TestSignAndValidateEd25519(t *testing.T) {

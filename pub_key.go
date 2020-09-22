@@ -4,14 +4,14 @@ import (
 	"bytes"
 	"crypto/sha256"
 
-	"github.com/intfoundation/bls"
 	secp256k1 "github.com/btcsuite/btcd/btcec"
-	ethcrypto "github.com/intfoundation/intchain/crypto"
-	"github.com/tendermint/ed25519"
-	"github.com/tendermint/ed25519/extra25519"
+	"github.com/intfoundation/bls"
+	"github.com/intfoundation/ed25519"
+	"github.com/intfoundation/ed25519/extra25519"
 	. "github.com/intfoundation/go-common"
 	"github.com/intfoundation/go-data"
 	"github.com/intfoundation/go-wire"
+	ethcrypto "github.com/intfoundation/intchain/crypto"
 	"golang.org/x/crypto/ripemd160"
 )
 
@@ -429,7 +429,7 @@ func (pubKey BLSPubKey) VerifyBytes(msg []byte, sig_ Signature) bool {
 		}
 		return bls.Verify(sign, msg, pub)
 	} else {
-		return false;
+		return false
 	}
 }
 

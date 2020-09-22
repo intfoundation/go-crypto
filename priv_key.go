@@ -3,14 +3,14 @@ package crypto
 import (
 	"bytes"
 
-	"github.com/intfoundation/bls"
 	secp256k1 "github.com/btcsuite/btcd/btcec"
-	ethcrypto "github.com/intfoundation/intchain/crypto"
-	"github.com/tendermint/ed25519"
-	"github.com/tendermint/ed25519/extra25519"
+	"github.com/intfoundation/bls"
+	"github.com/intfoundation/ed25519"
+	"github.com/intfoundation/ed25519/extra25519"
 	. "github.com/intfoundation/go-common"
 	"github.com/intfoundation/go-data"
 	"github.com/intfoundation/go-wire"
+	ethcrypto "github.com/intfoundation/intchain/crypto"
 )
 
 // PrivKey is part of PrivAccount and state.PrivValidator.
@@ -25,12 +25,12 @@ type PrivKey interface {
 const (
 	TypeEd25519   = byte(0x01)
 	TypeSecp256k1 = byte(0x02)
-	TypeEthereum   = byte(0x03)
+	TypeEthereum  = byte(0x03)
 	TypeBls       = byte(0x04)
 	NameEd25519   = "ed25519"
 	NameSecp256k1 = "secp256k1"
-	NameEthereum    = "ethereum"
-	NameBls        = "bls"
+	NameEthereum  = "ethereum"
+	NameBls       = "bls"
 )
 
 var privKeyMapper data.Mapper
@@ -204,7 +204,6 @@ func (privKey PrivKeySecp256k1) String() string {
 	return Fmt("PrivKeySecp256k1{*****}")
 }
 
-
 type EthereumPrivKey []byte
 
 func (privKey EthereumPrivKey) Bytes() []byte {
@@ -241,11 +240,9 @@ func (privKey EthereumPrivKey) Equals(other PrivKey) bool {
 	}
 }
 
-
 func (privKey EthereumPrivKey) MarshalJSON() ([]byte, error) {
 	return data.Encoder.Marshal(privKey[:])
 }
-
 
 func (privKey *EthereumPrivKey) UnmarshalJSON(enc []byte) error {
 	var ref []byte
@@ -284,7 +281,6 @@ func GenPrivKeySecp256k1FromSecret(secret []byte) PrivKeySecp256k1 {
 	copy(privKeyBytes[:], priv.Serialize())
 	return PrivKeySecp256k1(privKeyBytes)
 }
-
 
 //-------------------------------------
 // Implements PrivKey
@@ -366,6 +362,7 @@ func (privKey *BLSPrivKey) UnmarshalJSON(enc []byte) error {
 }*/
 
 type BLSPrivKey [32]byte
+
 func (privKey BLSPrivKey) Bytes() []byte {
 	return privKey[:]
 }
